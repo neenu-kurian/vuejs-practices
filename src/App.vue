@@ -1,35 +1,38 @@
 <template>
-  <div>
-    <form-helper>
-      <div slot="form-header">
-        <h3>This is the title of the form</h3>
-        <p>Information about the form</p>
-      </div>
-      <div slot="form-fields">
-        <input type="text" placeholder="name" required />
-        <input type="password" placeholder="password" required />
-      </div>
-      <div slot="form-controls">
-        <button v-on:click="handleSubmit">Submit</button>
-      </div>
-    </form-helper>
-  </div>
+  <v-app>
+    <v-toolbar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Vuetify</span>
+        <span class="font-weight-light">MATERIAL DESIGN</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        flat
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+      >
+        <span class="mr-2">Latest Release</span>
+      </v-btn>
+    </v-toolbar>
+
+    <v-content>
+      <HelloWorld/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import formHelper from './components/formHelper.vue'
+import HelloWorld from './components/HelloWorld'
 
 export default {
+  name: 'App',
   components: {
-    'form-helper':formHelper
+    HelloWorld
   },
-  data() {
+  data () {
     return {
-      title: "I am a dynamic slot title"
-    };
+      //
+    }
   }
-};
+}
 </script>
-
-<style>
-</style>
