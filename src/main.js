@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import './plugins/vuetify'
+// import './plugins/vuetify'
 import App from './App.vue'
-import Vuetify from 'vuetify'
-import 'vuetify/dist/vuetify.min.css'
+// import Vuetify from 'vuetify'
+// import 'vuetify/dist/vuetify.min.css'
 // var css = require('./file.styl');
 
-Vue.use(Vuetify)
+// Vue.use(Vuetify)
 
 export const bus= new Vue();
 

@@ -27,6 +27,13 @@ export default {
     return {
       title: "I am a dynamic slot title"
     };
+  },
+  methods: {
+    handleSubmit: function(event) {
+      event.preventDefault();
+      console.log('submitted');
+      gtag('event', 'click', {event_category:'button',event_action:'click',event_label: 'submit button click'})
+    }
   }
 };
 </script>
